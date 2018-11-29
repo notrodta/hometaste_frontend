@@ -53,63 +53,69 @@ class AddRecipe extends Component {
           <h3>Add Recipe</h3>
         </div>
 
-        <form onSubmit={this.handleSubmit.bind(this)}>
+        <div class = "col-12">
+          <form onSubmit={this.handleSubmit.bind(this)}>
 
-          <div>
-            <img src='/images/apple.png' height="200px" width="200px" />
-          </div>
+            <div >
+              <img src='/images/apple.png' height="200px" width="200px" />
+            </div>
 
-          <div>
-            <label>Title</label><br />
-            <input type="text" ref="title" />
-          </div>
+            <br /><br />
 
-          <div>
-            <label>Calories</label><br />
-            <input type="text" ref="calories" />
-          </div>
+            <div>
+              <label>Title: &nbsp;</label>
+              <input type="text" ref="title" />
+            </div>
 
-          <div>
-            <label>Start Time</label><br />
-            <input type="time" id="appt" name="appt" min="9:00" max="18:00" required ref="startTime" />
-          </div>
+            <div>
+              <label>Calories: &nbsp;</label>
+              <input type="text" ref="calories" />
+            </div>
 
-          <div>
-            <label>Servings</label><br />
-            <input type="text" ref="servings" />
-          </div>
+            <div>
+              <label>Start Time: &nbsp;</label>
+              <input type="time" id="appt" name="appt" min="9:00" max="18:00" required ref="startTime" />
+            </div>
 
-          <div>       
-            <label>Comments</label><br />   
-            <textarea rows="4" cols="50" name="comments" placeholder="Enter text here..." ref = "comments" />
-          </div>
+            <div>
+              <label>Servings: &nbsp;</label>
+              <input type="text" ref="servings" />
+            </div>
 
-          <div>       
-            <label>Descriptions</label><br />   
-            <textarea rows="4" cols="50" name="comments" placeholder="Enter text here..." ref = "descriptions" />
-          </div>
+            <br /><br />
 
-          <div>       
-            <label>Instructions</label><br />   
-            <textarea rows="4" cols="50" name="comments" placeholder="Enter text here..." ref = "instructions" />
-          </div>
+            <div>       
+              <label>Comments</label><br />   
+              <textarea rows="4" cols="50" name="comments" placeholder="Enter text here..." ref = "comments" />
+            </div>
 
-          <div>       
-            <label>Ingredients</label><br />   
-            <textarea rows="4" cols="50" name="comments" placeholder="Enter text here..." ref = "ingredients" />
-          </div>
+            <div>       
+              <label>Descriptions</label><br />   
+              <textarea rows="4" cols="50" name="comments" placeholder="Enter text here..." ref = "descriptions" />
+            </div>
 
-          <div>
-            <label>Category</label><br />
-            <select ref="category">
-              {categoryOptions}
-            </select>
-          </div>
-          <br />
+            <div>       
+              <label>Instructions</label><br />   
+              <textarea rows="9" cols="65" name="comments" placeholder="Enter text here..." ref = "instructions" />
+            </div>
 
-          <input type="submit" value="Submit" />
-          <br />
-        </form>
+            <div>       
+              <label>Ingredients</label><br />   
+              <textarea rows="9" cols="65" name="comments" placeholder="Enter text here..." ref = "ingredients" />
+            </div>
+
+            <div>
+              <label>Category</label><br />
+              <select ref="category">
+                {categoryOptions}
+              </select>
+            </div>
+            <br />
+
+            <input type="submit" value="Submit" />
+            <br />
+          </form>
+        </div>
       </div>
     );
   }
