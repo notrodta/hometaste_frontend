@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import Calendar from "react-big-calendar";
 import moment from "moment";
+import events from '../events'
+import ExampleControlSlot from '../ExampleControlSlot'
 
 import "react-big-calendar/lib/css/react-big-calendar.css";
+
+const propTypes = {}
 
 //import {BrowserRouter, Route } from 'react-router-dom'
 
@@ -31,15 +35,19 @@ class CalendarView extends Component {
       <div>
         <p> test </p>
         <Calendar
+          selectable
           localizer={localizer}
           defaultDate={new Date()}
           defaultView="week"
           events={this.state.events}
+          onSelectEvent={event => alert(event.title + " " + event.start + "\n" + event.end )}
           style={{ height: "100vh" }}
         />
       </div>
     );
   }
 }
+
+CalendarView.propTypes = propTypes
 
 export default CalendarView;

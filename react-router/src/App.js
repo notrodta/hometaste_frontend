@@ -6,7 +6,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import Navigation from "./components/Navigation";
-import RecipeForm from "./components/RecipeForm"
+import RecipeForm from "./components/recipeForm/RecipeForm"
 import CalendarView from "./components/CalendarView"
 
 
