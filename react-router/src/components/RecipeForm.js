@@ -3,16 +3,11 @@ import uuid from 'uuid';
 import Recipes from './Recipes';
 import AddRecipe from './AddRecipe';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-import '../../App.css';
-
 class RecipeForm extends Component {
   constructor(){
     super();
     this.state = {
       Recipes: [],
-      todos:[]
     }
   }
 
@@ -30,7 +25,7 @@ class RecipeForm extends Component {
       },
       {
         id:uuid.v4(),
-        title: 'Ecommerce Shopping Cart',
+        title: 'Rod Ta',
         category: 'Web Development'
       }
     ]});
@@ -56,9 +51,10 @@ class RecipeForm extends Component {
 
   render() {
     return (
-      <div className="App" id="addRecipe">
-        <AddRecipe addRecipe={this.handleAddRecipe.bind(this)} />
-        {/* <Recipes Recipes={this.state.Recipes} onDelete={this.handleDeleteRecipe.bind(this)} /> */}
+      <div className="App">
+        HELLOOO!!
+        {/*<AddRecipe addRecipe={this.handleAddRecipe.bind(this)} />
+        <Recipes Recipes={this.state.Recipes} onDelete={this.handleDeleteRecipe.bind(this)} />*/}
         <hr />
       </div>
     );

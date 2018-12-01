@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
-import { Button } from 'react-bootstrap';
-import { Image } from 'react-bootstrap';
-import { FormGroup } from 'react-bootstrap';
-import { ControlLabel } from 'react-bootstrap';
-import { FormControl } from 'react-bootstrap';
-import { Form } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-import { Checkbox } from 'react-bootstrap';
-
-import apple from '../images/apple.png'
+// import { Button } from 'react-bootstrap';
+// import { Image } from 'react-bootstrap';
+// import { FormGroup } from 'react-bootstrap';
+// import { ControlLabel } from 'react-bootstrap';
+// import { FormControl } from 'react-bootstrap';
 
 
 class AddRecipe extends Component {
@@ -54,14 +49,15 @@ class AddRecipe extends Component {
     return (
       <div class="row text-center">
 
-        <div class = "col-12" >
+        <div class = "col-12">
           <h3>Add Recipe</h3>
         </div>
 
         <div class = "col-12">
           <form onSubmit={this.handleSubmit.bind(this)}>
+
             <div >
-              <img src={apple} height="200px" width="200px" />
+              <img src='/images/apple.png' height="200px" width="200px" />
             </div>
 
             <br /><br />

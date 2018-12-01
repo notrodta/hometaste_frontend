@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import './App.css';
 
 import Home from "./components/Home";
 import About from "./components/About";
@@ -8,6 +9,7 @@ import Error from "./components/Error";
 import Navigation from "./components/Navigation";
 import RecipeForm from "./components/recipeForm/RecipeForm"
 import CalendarView from "./components/CalendarView"
+import SignIn from "./components/SignIn"
 
 
 class App extends Component {
@@ -22,6 +24,7 @@ class App extends Component {
             <Route path="/contact" component={Contact} />
             <Route path="/recipeform" component={RecipeForm} />
             <Route path="/calendarView" component={CalendarView} />
+            <Route path="/signIn" component={SignIn} />
             <Route component={Error} />
           </Switch>
         </div>

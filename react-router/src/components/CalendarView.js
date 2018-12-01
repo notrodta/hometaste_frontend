@@ -3,6 +3,7 @@ import Calendar from "react-big-calendar";
 import moment from "moment";
 import events from '../events'
 import ExampleControlSlot from '../ExampleControlSlot'
+import uuid from 'uuid';
 
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
@@ -17,18 +18,32 @@ const localizer = Calendar.momentLocalizer(moment);
 class CalendarView extends Component {
   state = {
     events: [
+      // {
+      //   start: new Date(2018, 10, 22, 15, 30),
+      //   end: new Date(moment().add(1, "hours")),
+      //   title: "Some title"
+      // },
+      // {
+      //   start: new Date(2018, 10, 25, 15, 30),
+      //   end: new Date(2018, 10, 25, 16, 30),
+      //   title: "thing 2"
+      // },
       {
+        id: uuid.v4(),
+        title: "curry chicken",
+        calories: 256,
+        servings: 4,
+        comments: "some comments",
+        descriptions: "best curry chicken!!!",
+        instructions: "just do it",
+        ingredients: "curry + chicken",
+        category: "chicken",
         start: new Date(2018, 10, 22, 15, 30),
         end: new Date(moment().add(1, "hours")),
-        title: "Some title"
-      },
-      {
-        start: new Date(2018, 10, 25, 15, 30),
-        end: new Date(2018, 10, 25, 16, 30),
-        title: "thing 2"
-      },
+      }
     ]
   };
+
 
   render() {
     return (
@@ -40,7 +55,8 @@ class CalendarView extends Component {
           defaultDate={new Date()}
           defaultView="week"
           events={this.state.events}
-          onSelectEvent={event => alert(event.title + " " + event.start + "\n" + event.end )}
+          onSelectEvent={event => alert("Title: " + event.title + "\n Calaries: " + event.calories + "\n servings: " + event.servings + "\n comments:\n" + event.comments + "\n descriptions:\n" + event.descriptions + "\n instructions:\n" + event.instructions + "\n ingredients\n" + event.ingredients )}
+          //onSelectEvent={() => window.open("http://localhost:3000/" + this.state.event.title)}
           style={{ height: "100vh" }}
         />
       </div>
